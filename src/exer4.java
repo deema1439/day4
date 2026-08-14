@@ -22,17 +22,13 @@ public class exer4 {
         System.out.println(" ");
 
         //Q2
-
-      while(true){
-         System.out.println("before playing dont forget if you want to quit the game write quit ");
-         System.out.print("now lets play write any word to reverse: ");
-         String word=s.nextLine();
-          if(word.equals("quit")){
-               break; }
-              StringBuilder b = new StringBuilder(word);
-              b.reverse();
-              System.out.println("the reverse is: "+b);}
-          System.out.println("  ");
+        System.out.println("enter a word : ");
+        String word=s.nextLine().trim();
+        String revarce="";
+        for(int i=word.length()-1;i>=0;i--){
+            revarce+=word.charAt(i);
+        }
+        System.out.println(revarce);
 
         //Q3
        System.out.print("enter any number if you want to find the factorial :");
@@ -44,7 +40,6 @@ public class exer4 {
 
         //Q4
         System.out.println(" ");
-
         System.out.println("Enter first number : ");
         int base=s.nextInt();
        System.out.println("Enter second number : ");
@@ -79,7 +74,7 @@ public class exer4 {
 
         //Q6
 
-       System.out.println("enter a positive integer: ");
+      System.out.println("enter a positive integer: ");
        int num = s.nextInt();
        boolean prime=true;
        if(num<=1){
@@ -95,6 +90,8 @@ public class exer4 {
             System.out.println("not prime");
        }
 
+       s.nextLine();
+
 
         //Q7
 
@@ -105,23 +102,32 @@ public class exer4 {
             }
        }
 
+         //Q8
 
-         //Q8 i did not know how to use loop in this Q
-
-        String t = "level";
-        StringBuilder r = new StringBuilder(t);
-        r.reverse();
-        if (t.equalsIgnoreCase(r.toString()))  {
-            System.out.println(t + " is a palindrome");
-        } else {
-            System.out.println(t + " is not a palindrome");
+        System.out.println("enter the word: ");
+        String word1=s.nextLine();
+       boolean ispalindrome =true;
+       String revarcee="";
+       for(int i=word1.length()-1;i>=0;i--) {
+           revarcee += word1.charAt(i);
+       }if (revarcee.equals(word1)) {
+           System.out.println("palindrome");
+        }else if (!revarcee.equals(word1)){
+            System.out.println("its not palindrome");
         }
+
+
+
+
+
+
 
 
 
 
     }
 }
+
 
 
 
